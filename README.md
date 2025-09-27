@@ -48,27 +48,87 @@ This template serves as an initial base structure for data science projects in R
 
 ## Usage
 
-### Creating a project on your computer
+### Creating a New Project
 
-1. Clone the repository:
-
+1. **Clone the template repository:**
    ```bash
-   git clone https://github.com/paulovillarroel/r-data-science-template.git .
+   git clone https://github.com/paulovillarroel/r-data-science-template.git your-project-name
+   cd your-project-name
    ```
 
-   (You must have GitHub CLI) - This creates the folder structure
-2. Remove .gitkeep files:
+2. **Set up as your own repository:**
+   ```bash
+   rm -rf .git
+   git init
+   git add .
+   git commit -m "Initial commit from R data science template"
+   ```
 
+3. **Clean up template files:**
    ```powershell
+   # Windows PowerShell
    Get-ChildItem -Recurse -Name ".gitkeep" | Remove-Item -Force
    ```
-3. Set up environment variables:
+   ```bash
+   # Linux/Mac
+   find . -name ".gitkeep" -delete
+   ```
 
+4. **Set up environment:**
    ```bash
    cp .env.example .env
    ```
-
    Edit `.env` file with your specific configuration values.
+
+5. **Initialize R environment:**
+   ```r
+   install.packages("renv")
+   renv::init()
+   ```
+
+6. **Connect to your remote repository** (optional):
+   ```bash
+   git remote add origin https://github.com/your-username/your-project-name.git
+   git push -u origin main
+   ```
+
+## Development Workflow
+
+### Typical Project Workflow
+
+1. **Start with data exploration:**
+   - Place raw data in `data/raw/`
+   - Create exploration notebooks in `notebooks/exploratory/`
+   - Document initial findings
+
+2. **Data processing:**
+   - Write data cleaning scripts in `scripts/data_processing/`
+   - Save processed data to `data/processed/`
+   - Create reusable functions in `functions/`
+
+3. **Analysis and modeling:**
+   - Develop analysis scripts in `scripts/analysis/`
+   - Build models in `scripts/modeling/`
+   - Test model prototypes in `notebooks/prototypes/`
+   - Save model artifacts in `models/testing/`
+
+4. **Documentation and reporting:**
+   - Create reports in `reports/`
+   - Generate visualizations to `outputs/figures/`
+   - Export summary tables to `outputs/tables/`
+
+5. **Production deployment:**
+   - Finalize deployment scripts in `scripts/deployment/`
+   - Move validated models to `models/production/`
+   - Document deployment in `docs/`
+
+### Best Practices
+
+- **Use version control**: Commit frequently with descriptive messages
+- **Document everything**: README files, code comments, and methodology docs
+- **Test your code**: Write unit tests in `tests/`
+- **Manage dependencies**: Use `renv::snapshot()` to lock package versions
+- **Keep data secure**: Never commit sensitive data; use `.env` for credentials
 
 ## Environment Management
 
@@ -76,16 +136,4 @@ This template includes:
 
 - **`.env.example`** - Template for environment variables
 - **`.gitignore`** - Comprehensive gitignore for R data science projects
-- **`renv.lock`** - (Create with `renv::snapshot()`) for R dependency management
-
-## Getting Started
-
-1. **Initialize R environment** (recommended):
-
-   ```r
-   install.packages("renv")
-   renv::init()
-   ```
-2. **Create your first analysis script** in `scripts/analysis/`
-3. **Store raw data** in `data/raw/`
-4. **Document your work** in `notebooks/exploratory/` or `reports/`
+- **`renv`** - Use `renv::init()` and `renv::snapshot()` for dependency management
