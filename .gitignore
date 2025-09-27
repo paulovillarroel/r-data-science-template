@@ -64,3 +64,13 @@ venv/
 .venv/
 pip-log.txt
 pip-delete-this-directory.txt
+
+# AI Agent configuration files
+CLAUDE.md
+GEMINI.md
+AGENTS.md
+.claude/
+.cursor/
+*.ai
+*_agent.md
+*_prompt.md
