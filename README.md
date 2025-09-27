@@ -50,6 +50,22 @@ This template serves as an initial base structure for data science projects in R
 
 ### Creating a New Project
 
+#### Option 1: Simple Setup (Recommended for beginners)
+
+1. **Clone directly into your project folder:**
+   ```bash
+   git clone https://github.com/paulovillarroel/r-data-science-template.git .
+   ```
+
+2. **Clean up template files:**
+   ```powershell
+   Get-ChildItem -Path . -Recurse -Filter ".gitkeep" | Remove-Item -Force
+   ```
+
+3. **Start working on your project!**
+
+#### Option 2: Complete Setup (For independent projects)
+
 1. **Clone the template repository:**
    ```bash
    git clone https://github.com/paulovillarroel/r-data-science-template.git your-project-name
@@ -74,6 +90,8 @@ This template serves as an initial base structure for data science projects in R
    find . -name ".gitkeep" -delete
    ```
 
+#### Next Steps (For both options)
+
 4. **Set up environment:**
    ```bash
    cp .env.example .env
@@ -86,7 +104,7 @@ This template serves as an initial base structure for data science projects in R
    renv::init()
    ```
 
-6. **Connect to your remote repository** (optional):
+6. **Connect to your remote repository** (Option 2 only):
    ```bash
    git remote add origin https://github.com/your-username/your-project-name.git
    git push -u origin main
