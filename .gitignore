@@ -1,0 +1,66 @@
+# R specific files
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+*.Rproj
+.Rproj.user/
+
+# Environment files
+.env
+.Renviron
+
+# Log files
+logs/*.log
+*.log
+
+# Temporary files
+*~
+.DS_Store
+Thumbs.db
+
+# Data files (adjust as needed)
+data/raw/*.csv
+data/raw/*.xlsx
+data/raw/*.json
+data/processed/*.rds
+data/processed/*.csv
+
+# Model files
+models/testing/*.rds
+models/production/*.rds
+*.pkl
+*.joblib
+
+# Output files
+outputs/figures/*.png
+outputs/figures/*.jpg
+outputs/figures/*.pdf
+outputs/tables/*.csv
+outputs/tables/*.xlsx
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store?
+ehthumbs.db
+Icon?
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python (if mixed R/Python project)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
