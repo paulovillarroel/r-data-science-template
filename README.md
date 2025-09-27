@@ -161,14 +161,14 @@ This template includes:
 
 ### Reproducibility Workflow
 
-### 🚨 IMPORTANTE - TEMPLATE FILES 🚨
+### 🚨 IMPORTANT - TEMPLATE FILES 🚨
 
-**Los archivos `renv.lock.example` y `session_info.R` son solo EJEMPLOS de referencia. NO son para uso directo. Debes:**
+**The files `renv.lock.example` and `session_info.R` are REFERENCE EXAMPLES only. NOT for direct use. You must:**
 
-- ❌ **NO usar** `renv.lock.example` como tu lockfile real
-- ✅ **Crear tu propio** `renv.lock` con `renv::snapshot()` después de instalar TUS paquetes
-- ✅ **Personalizar** `session_info.R` según las necesidades de TU proyecto
-- ✅ **Eliminar** `renv.lock.example` cuando tengas tu `renv.lock` real
+- ❌ **DO NOT use** `renv.lock.example` as your actual lockfile
+- ✅ **Create your own** `renv.lock` with `renv::snapshot()` after installing YOUR packages
+- ✅ **Customize** `session_info.R` according to YOUR project needs
+- ✅ **Delete** `renv.lock.example` when you have your real `renv.lock`
 
 1. **Initialize environment**: `renv::init()` - Creates your project-specific library
 2. **Install your packages**: Add packages your project actually needs
