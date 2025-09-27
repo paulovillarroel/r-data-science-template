@@ -153,5 +153,5 @@ This template serves as an initial base structure for data science projects in R
 This template includes:
 
 - **`.env.example`** - Template for environment variables
-- **`.gitignore`** - Comprehensive gitignore for R data science projects
+- **`.gitignore`** - Comprehensive gitignore for R data science projects (includes AI agent configuration files for security)
 - **`renv`** - Use `renv::init()` and `renv::snapshot()` for dependency management
