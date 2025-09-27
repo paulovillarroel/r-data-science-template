@@ -102,6 +102,7 @@ This template serves as an initial base structure for data science projects in R
    ```r
    install.packages("renv")
    renv::init()
+   renv::snapshot()  # Lock current package versions
    ```
 
 6. **Connect to your remote repository** (Option 2 only):
@@ -145,13 +146,24 @@ This template serves as an initial base structure for data science projects in R
 - **Use version control**: Commit frequently with descriptive messages
 - **Document everything**: README files, code comments, and methodology docs
 - **Test your code**: Write unit tests in `tests/`
-- **Manage dependencies**: Use `renv::snapshot()` to lock package versions
+- **Manage dependencies**: Use `renv::snapshot()` to lock package versions, run `source("session_info.R")` to document your environment
 - **Keep data secure**: Never commit sensitive data; use `.env` for credentials
 
-## Environment Management
+## Environment Management & Reproducibility
 
 This template includes:
 
 - **`.env.example`** - Template for environment variables
 - **`.gitignore`** - Comprehensive gitignore for R data science projects (includes AI agent configuration files for security)
+- **`renv.lock.example`** - Example lockfile showing package version structure
+- **`session_info.R`** - Script to document R session and package versions
 - **`renv`** - Use `renv::init()` and `renv::snapshot()` for dependency management
+
+### Reproducibility Workflow
+
+1. **Lock dependencies**: After installing packages, run `renv::snapshot()` to create/update `renv.lock`
+2. **Document environment**: Run `source("session_info.R")` to save session details
+3. **Share project**: Include `renv.lock` in version control (not the `renv/` folder)
+4. **Restore environment**: Others run `renv::restore()` to recreate exact package versions
+
+**Note**: `renv` manages R packages but not R version. Document your R version in project README.

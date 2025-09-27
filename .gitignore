@@ -6,6 +6,10 @@
 *.Rproj
 .Rproj.user/
 
+# renv files (keep renv.lock, ignore renv/ folder)
+renv/
+!renv.lock
+
 # Environment files
 .env
 .Renviron
@@ -38,6 +42,7 @@ outputs/figures/*.jpg
 outputs/figures/*.pdf
 outputs/tables/*.csv
 outputs/tables/*.xlsx
+outputs/session_info.rds
 
 # IDE files
 .vscode/
