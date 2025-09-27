@@ -204,3 +204,44 @@ This template includes:
 7. **Restore environment**: Others run `renv::restore()` to recreate your exact environment
 
 **Note**: `renv` manages R packages but not R version. Document your actual R version in your project README.
+
+## Contributing
+
+We welcome contributions to improve this R data science template! Here's how you can help:
+
+### How to Contribute
+
+1. **Fork the repository** on GitHub
+2. **Create a feature branch**: `git checkout -b feature/your-improvement`
+3. **Make your changes** and test them thoroughly
+4. **Commit your changes**: `git commit -m "Add: your improvement description"`
+5. **Push to your branch**: `git push origin feature/your-improvement`
+6. **Create a Pull Request** with a clear description of your changes
+
+### What We're Looking For
+
+- 🐛 **Bug fixes** in documentation or structure
+- 📚 **Documentation improvements** and clarifications
+- 🔧 **New folder structures** or organizational improvements
+- 💡 **Best practices updates** for R data science workflows
+- 🌐 **Cross-platform compatibility** improvements
+
+### Guidelines
+
+- Keep changes focused and atomic
+- Update documentation when adding new features
+- Test your changes across different platforms when possible
+- Follow existing naming conventions and structure
+- Ensure all file paths work on Windows, Mac, and Linux
+
+### Questions or Ideas?
+
+- Open an **Issue** to discuss ideas before implementing
+- Check existing issues to avoid duplicates
+- Provide clear examples and use cases
+
+**Thank you for helping make this template better for the R data science community!** 🙏
+
+## License
+
+This template is open source and available under the [MIT License](https://opensource.org/licenses/MIT).
