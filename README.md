@@ -17,10 +17,13 @@ This template serves as an initial base structure for data science projects in R
 - **`functions/`** - Custom R functions and utilities
   - Reusable functions for data processing and analysis
 
+- **`models/`** - Machine learning models and related objects
+  - `testing/` - Models under development and testing
+  - `production/` - Validated models ready for production use
+
 - **`outputs/`** - Generated outputs from analyses
   - `figures/` - Plots, charts, and visualizations
   - `tables/` - Processed tables and summary statistics
-  - `models/` - Saved model objects and results
 
 - **`reports/`** - Documentation and reports
   - R Markdown files, Quarto documents, Jupyter Notebooks, final reports, and documentation
