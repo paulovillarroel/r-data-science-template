@@ -1,4 +1,5 @@
 {
+  "_comment": "This is an EXAMPLE renv.lock file for reference only. DELETE this file and create your own with renv::snapshot() after installing your actual project dependencies.",
   "R": {
     "Version": "4.4.1",
     "Repositories": [

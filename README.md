@@ -155,15 +155,27 @@ This template includes:
 
 - **`.env.example`** - Template for environment variables
 - **`.gitignore`** - Comprehensive gitignore for R data science projects (includes AI agent configuration files for security)
-- **`renv.lock.example`** - Example lockfile showing package version structure
-- **`session_info.R`** - Script to document R session and package versions
+- **`renv.lock.example`** - Example lockfile structure (replace with your actual `renv.lock`)
+- **`session_info.R`** - Template script to document your R environment (customize as needed)
 - **`renv`** - Use `renv::init()` and `renv::snapshot()` for dependency management
 
 ### Reproducibility Workflow
 
-1. **Lock dependencies**: After installing packages, run `renv::snapshot()` to create/update `renv.lock`
-2. **Document environment**: Run `source("session_info.R")` to save session details
-3. **Share project**: Include `renv.lock` in version control (not the `renv/` folder)
-4. **Restore environment**: Others run `renv::restore()` to recreate exact package versions
+### 🚨 IMPORTANTE - TEMPLATE FILES 🚨
 
-**Note**: `renv` manages R packages but not R version. Document your R version in project README.
+**Los archivos `renv.lock.example` y `session_info.R` son solo EJEMPLOS de referencia. NO son para uso directo. Debes:**
+
+- ❌ **NO usar** `renv.lock.example` como tu lockfile real
+- ✅ **Crear tu propio** `renv.lock` con `renv::snapshot()` después de instalar TUS paquetes
+- ✅ **Personalizar** `session_info.R` según las necesidades de TU proyecto
+- ✅ **Eliminar** `renv.lock.example` cuando tengas tu `renv.lock` real
+
+1. **Initialize environment**: `renv::init()` - Creates your project-specific library
+2. **Install your packages**: Add packages your project actually needs
+3. **Lock dependencies**: `renv::snapshot()` - Creates/updates YOUR `renv.lock` file
+4. **Document environment**: Customize and run `session_info.R` for your project
+5. **Remove example files**: Delete `renv.lock.example` when you have your real `renv.lock`
+6. **Share project**: Include YOUR `renv.lock` in version control (not the `renv/` folder)
+7. **Restore environment**: Others run `renv::restore()` to recreate your exact environment
+
+**Note**: `renv` manages R packages but not R version. Document your actual R version in your project README.

@@ -1,4 +1,6 @@
-# Session Information Script
+# Session Information Script - TEMPLATE
+# This is a template script for documenting your R environment
+# CUSTOMIZE this script according to your project needs
 # Run this script to document your R environment for reproducibility
 # Include this output in your project documentation
 
