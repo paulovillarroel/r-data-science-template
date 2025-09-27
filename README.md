@@ -58,8 +58,12 @@ This template serves as an initial base structure for data science projects in R
    ```
 
 2. **Clean up template files:**
-   ```powershell
+   ```bash
+   # Windows PowerShell
    Get-ChildItem -Path . -Recurse -Filter ".gitkeep" | Remove-Item -Force
+
+   # Mac/Linux
+   find . -name ".gitkeep" -delete
    ```
 
 3. **Start working on your project!**
@@ -74,7 +78,16 @@ This template serves as an initial base structure for data science projects in R
 
 2. **Set up as your own repository:**
    ```bash
+   # Windows PowerShell
+   Remove-Item -Recurse -Force .git
+
+   # Windows Command Prompt
+   rmdir /s /q .git
+
+   # Mac/Linux
    rm -rf .git
+
+   # All platforms
    git init
    git add .
    git commit -m "Initial commit from R data science template"
@@ -94,6 +107,13 @@ This template serves as an initial base structure for data science projects in R
 
 4. **Set up environment:**
    ```bash
+   # Windows PowerShell
+   Copy-Item .env.example .env
+
+   # Windows Command Prompt
+   copy .env.example .env
+
+   # Mac/Linux
    cp .env.example .env
    ```
    Edit `.env` file with your specific configuration values.
@@ -102,7 +122,12 @@ This template serves as an initial base structure for data science projects in R
    ```r
    install.packages("renv")
    renv::init()
-   renv::snapshot()  # Lock current package versions
+
+   # Install your project-specific packages here, for example:
+   # install.packages(c("dplyr", "ggplot2", "tidyr"))
+
+   # After installing your packages, lock the versions:
+   # renv::snapshot()
    ```
 
 6. **Connect to your remote repository** (Option 2 only):
@@ -171,10 +196,10 @@ This template includes:
 - ✅ **Delete** `renv.lock.example` when you have your real `renv.lock`
 
 1. **Initialize environment**: `renv::init()` - Creates your project-specific library
-2. **Install your packages**: Add packages your project actually needs
+2. **Install your packages**: Add packages your project actually needs with `install.packages()`
 3. **Lock dependencies**: `renv::snapshot()` - Creates/updates YOUR `renv.lock` file
-4. **Document environment**: Customize and run `session_info.R` for your project
-5. **Remove example files**: Delete `renv.lock.example` when you have your real `renv.lock`
+4. **Remove example files**: Delete `renv.lock.example` when you have your real `renv.lock`
+5. **Document environment**: Customize and run `session_info.R` for your project
 6. **Share project**: Include YOUR `renv.lock` in version control (not the `renv/` folder)
 7. **Restore environment**: Others run `renv::restore()` to recreate your exact environment
 
